@@ -22,10 +22,9 @@ const UserSchema = new Schema({
     },
     date:{
         type: Date,
-        required: Date.now
+        default: Date.now()
     },
   });
 
   const User = mongoose.model('user', UserSchema);
-  User.createIndexes();
   module.exports = User;
